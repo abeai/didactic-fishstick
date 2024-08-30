@@ -1,0 +1,1112 @@
+{
+	"info": {
+		"_postman_id": "e7c5263a-4908-43d7-a884-2c7620dbfd12",
+		"name": "Casey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1414004"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "9fad4f1307c91d68307330c3f17b5c33FFFFNRAL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"superadmin\",\r\n    \"password\":\"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "validate token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIzMzg4OTg0LCJleHAiOjE3MjMzOTA3ODR9.fI6fOgZl5ngsJ5pLFs24ZYnfJNeJ42PNaBtVgh44shg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Api-Key",
+						"value": "9fad4f1307c91d68307330c3f17b5c33FFFFNRAL",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/user/validate-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"user",
+						"validate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyNzQ4OTY2LCJleHAiOjE3MjI3NTA3NjZ9.BrJuaHjCdcfTMNBrdVwiYGApbdrHGDKktjJ40Y085ro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"johndeo123\",\r\n  \"email\": \"john.doe12321@example.com\",\r\n  \"name\": \"John Doe\",\r\n  \"password\": \"securepassword\",\r\n  \"userRoleId\": \"2407281123352787TKmxmWMNb\",\r\n  \"userOrgTypeId\": \"240728203332823hnHwYgj4DZ\",\r\n  \"userOrgId\": \"240730205753491Rka57kbQSh\",\r\n  \"statusId\": 1\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/user/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_org",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI0MDU0OTI4LCJleHAiOjE3MjQwNTg1Mjh9.eglS15UivI2yz8WPJ3wH-CYpGkCiSs9oUjkrd-6GgHw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgName\": \"ACDD\",\r\n    \"orgEmail\": \"mail2hari.ece@gmail.com\",\r\n    \"orgTypeId\": \"240819132801700jM9Z887Hlb\",\r\n    \"orgCategoryId\": \"240819132746118xUUbLZyJ4P\",\r\n    \"subAreaName\": \"AREE\",\r\n    \"subUrbnId\": \"\",\r\n    \"subUrbnName\": \"dfsadfsdfsdf\",\r\n    \"provinceId\": \"240819132852071JYKddX2t0n\",\r\n    \"deductionCode\": \"324234\",\r\n    \"otherEmails\": \"mail2hari.ece@gmail.com\",\r\n    \"telephoneNumbers\": \"09535109810\",\r\n    \"contactName\": \"Hari Surya Prakash Turangi\",\r\n    \"commenceDate\": \"2024-08-19T08:04:36.320Z\",\r\n    \"terminationDate\": \"9999-12-31T00:00:00.000Z\",\r\n    \"caseyCompany\": true,\r\n    \"consent\": false,\r\n    \"statusId\": \"240819132818836lIzsyPSsZq\",\r\n    \"subAreas\": {},\r\n    \"status\": {\r\n        \"id\": \"\",\r\n        \"status\": \"\",\r\n        \"createdBy\": \"\",\r\n        \"modifiedBy\": \"\",\r\n        \"createdAt\": \"2024-08-19T08:04:36.320Z\",\r\n        \"modifiedAt\": \"2024-08-19T08:04:36.320Z\",\r\n        \"lockId\": -1,\r\n        \"deleted\": false\r\n    },\r\n    \"province\": {\r\n        \"id\": \"240819132852071JYKddX2t0n\",\r\n        \"province\": \"SouthAfrica\",\r\n        \"createdAt\": \"2024-08-19T13:28:52.071815+05:30\",\r\n        \"createdBy\": \"superadmin\",\r\n        \"modifiedAt\": \"2024-08-19T13:28:52.071815+05:30\",\r\n        \"modifiedBy\": \"superadmin\",\r\n        \"lockId\": 1,\r\n        \"deleted\": false,\r\n        \"isArchived\": null,\r\n        \"hard\": null\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/organization/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"organization",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_member",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIzMDUzNjYzLCJleHAiOjE3MjMwNTU0NjN9.fMGIXHTZnp8r6lnBHyNn6SmhgwyZggcTL_GwNnXLYwI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"createdBy\": \"admin\",\r\n  \"modifiedBy\": \"admin\",\r\n  \"lockId\": 1,\r\n  \"id\": \"12345\",\r\n  \"idNumber\": \"7890123\",\r\n  \"titleId\": \"240728223451688ruwPSeMiyQ\",\r\n  \"initials\": \"J.D.\",\r\n  \"firstName\": \"John\",\r\n  \"surName\": \"Doe\",\r\n  \"payNumber\": \"PAY123\",\r\n  \"genderId\": \"1\",\r\n  \"dateOfBirth\": \"1990-01-01T00:00:00Z\",\r\n  \"organizationId\": \"240804180017297UbaPJOwtX4\",\r\n  \"subAreaId\": \"1\",\r\n  \"occupation\": \"Engineer\",\r\n  \"memStartDate\": \"2020-01-01T00:00:00Z\",\r\n  \"memEndDate\": \"2025-01-01T00:00:00Z\",\r\n  \"cellNumber\": \"555-1234\",\r\n  \"email\": \"john.doe@example.com\",\r\n  \"provinceId\": \"240727202946437rOQ700Mzeq\",\r\n  \"subUrbnId\": \"240729205724790N6vCzk0wjs\",\r\n  \"passport\": \"P123456789\",\r\n  \"membership\": \"Gold\",\r\n  \"payday\": \"31\",\r\n  \"incBasic\": \"5000.00\",\r\n  \"incLeave\": \"200.00\",\r\n  \"incOvertime\": \"150.00\",\r\n  \"incBonus\": \"500.00\",\r\n  \"incAllowance\": \"300.00\",\r\n  \"incOther\": \"100.00\",\r\n  \"incGross\": \"6250.00\",\r\n  \"expenseStatutory\": \"1000.00\",\r\n  \"expenseOthers\": \"500.00\",\r\n  \"expenseTotal\": \"1500.00\",\r\n  \"netSalary\": \"4750.00\",\r\n  \"deductPercent\": \"0.7\",\r\n  \"checkAfford\": true,\r\n  \"memberStatusId\": \"1\",\r\n  \"consent\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/member/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"member",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTQ5OTc1LCJleHAiOjE3MjIxNTE3NzV9.AH7E77DaBrdn0w8Fd47u9cBRsbI515DUvP9S0ix-ww0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"EMPLOYERRRR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user_type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTQ5OTc1LCJleHAiOjE3MjIxNTE3NzV9.AH7E77DaBrdn0w8Fd47u9cBRsbI515DUvP9S0ix-ww0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"EMPLOYERRRR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_province",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDkxODUwLCJleHAiOjE3MjIwOTM2NTB9.8DIU7B65fGgRA_ioWtjT5WfyOAd3p-0CQ8IxDXuP0xY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"province\":\"Eastern Cape\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/province/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"province",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_subarea",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDg1NzU2LCJleHAiOjE3MjIwODc1NTZ9.IpSHe7kHytnVIsZLfnf8AFCuf7bViinx1Taud6ztmjY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"subAreaCode\": \"SA001\",\r\n  \"name\": \"Downtown\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/subarea/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"subarea",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_suburban",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDkxODUwLCJleHAiOjE3MjIwOTM2NTB9.8DIU7B65fGgRA_ioWtjT5WfyOAd3p-0CQ8IxDXuP0xY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"provinceId\": \"240727202946437rOQ700Mzeq\",\r\n    \"name\": \"Downtown\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/suburban/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"suburban",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_org_type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyNzUwMzgwLCJleHAiOjE3MjI3NTIxODB9.9p7qVm7LyFVrZkUsWCdZLHbnLuKhH_qYTB5_r8VB4vA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgType\":\"MUNICIPALITY\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/orgtype/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"orgtype",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_org_category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyNzQ4OTY2LCJleHAiOjE3MjI3NTA3NjZ9.BrJuaHjCdcfTMNBrdVwiYGApbdrHGDKktjJ40Y085ro",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgCategory\":\"E-Commerce\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/orgcategory/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"orgcategory",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_person_title",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDExMzgyLCJleHAiOjE3MjIwMTMxODJ9.9wUGpYJ_kkkDdbE4BoQWFdrOZ1JyxN4wM1hplCA32LE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"ADMIN \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_sub_urban",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDExMzgyLCJleHAiOjE3MjIwMTMxODJ9.9wUGpYJ_kkkDdbE4BoQWFdrOZ1JyxN4wM1hplCA32LE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"ADMIN \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove_role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTQ5OTc1LCJleHAiOjE3MjIxNTE3NzV9.AH7E77DaBrdn0w8Fd47u9cBRsbI515DUvP9S0ix-ww0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roleName\":\"EMPLOYER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/role/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"role",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove_org_type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDQ1NzQyLCJleHAiOjE3MjIwNDc1NDJ9.chIgpOZdjWGPoNamSgVX8CfDJtEhIoK8LgNo4q74tbs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orgType\":\"Company\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/orgtype/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"orgtype",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove_province",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMDQ1NzQyLCJleHAiOjE3MjIwNDc1NDJ9.chIgpOZdjWGPoNamSgVX8CfDJtEhIoK8LgNo4q74tbs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"province\":\"Company\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/province/remove",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"province",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTQ5OTc1LCJleHAiOjE3MjIxNTE3NzV9.AH7E77DaBrdn0w8Fd47u9cBRsbI515DUvP9S0ix-ww0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=user_role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "user_role"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_orgs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyNzYwODcxLCJleHAiOjE3MjI3NjI2NzF9.vf8L5o5mbPhqgfutIb67q8Ba8UnUZQ5XXIBSOyn84zM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=organization",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "organization"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_app_users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyNjg5OTc1LCJleHAiOjE3MjI2OTE3NzV9.nY0uMyCRPSfmXcyv2P4rNoTYpqJmlyU_oPubHqHdlQc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "users"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_org_type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTc4MTM4LCJleHAiOjE3MjIxNzk5Mzh9.dTiXKtFTFKI9_fb6Kg210D0g9-lQonInd5FlA3HVACQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=org_type",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "org_type"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_user_type",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzIyMTc4MTM4LCJleHAiOjE3MjIxNzk5Mzh9.dTiXKtFTFKI9_fb6Kg210D0g9-lQonInd5FlA3HVACQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=user_type",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "user_type"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_suburban",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=suburban",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "suburban"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_province",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/admin/fetch?entity=province",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"admin",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "entity",
+							"value": "province"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch_members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/member/api/members?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"member",
+						"api",
+						"members"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Preview Premiums",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI0NDA0OTg2LCJleHAiOjE3MjQ0MDg1ODZ9.RiNh7Ice78wuu_-ms-tWWOme0upQtvGJNoUYIhA5ViY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "headerName1",
+						"value": "headerValue1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/hturangi/Desktop/Casey/sample files/RWC/policies-28-06-2024.csv"
+						},
+						{
+							"key": "headerNames",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/premiums/preview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"premiums",
+						"preview"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Members",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXBlcmFkbWluIiwiaWF0IjoxNzI0NDA0OTg2LCJleHAiOjE3MjQ0MDg1ODZ9.RiNh7Ice78wuu_-ms-tWWOme0upQtvGJNoUYIhA5ViY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "headerName1",
+						"value": "headerValue1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/hturangi/Desktop/Casey/sample files/RWC/policies-28-06-2024.csv"
+						},
+						{
+							"key": "headerNames",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9086/casey/v1/premiums/preview",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9086",
+					"path": [
+						"casey",
+						"v1",
+						"premiums",
+						"preview"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
